@@ -1,0 +1,18 @@
+import sys
+
+while True:
+    try:
+        n,m = map(int,sys.stdin.readline().split())
+    except:
+        break
+    count = 0
+
+    for i in range(n,m+1):
+        for x in str(i):
+            if str(i).count(x)>1:
+                break
+        else:
+            count+=1
+    print(count)
+
+
